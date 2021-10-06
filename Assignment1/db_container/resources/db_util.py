@@ -1,6 +1,6 @@
 import os
 
-#import pandas as pd
+import pandas as pd
 import sqlalchemy as db
 from sqlalchemy import Column, Float, Table, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
