@@ -5,7 +5,7 @@ from flask import Flask, json, request, Response
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-@app.route('/db_preprocessing/<table_name>', methods=['POST'])
+@app.route('/db_preprocessing/<table_name>', methods=['PUT'])
 def clean_data(table_name):
     db_api = os.environ['TRAININGDB_API']
     r = requests.get(db_api)
