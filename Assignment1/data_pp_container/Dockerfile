@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all files in training-db local host directory to /usr/src/myapp in Docker container
 COPY . .
 # Expose the port that our app runs in
-EXPOSE 5006
+EXPOSE 5005
 # Enviroment Variables
 ENV TRAININGDB_API=http://db_api:5005/training-db/housing
 #ENV MODEL_REPO=/usr/src/myapp/models
