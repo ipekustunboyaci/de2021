@@ -1,5 +1,7 @@
 import os
 
+import pandas as pd
+import requests
 from flask import Flask, json, request, Response
 
 app = Flask(__name__)
@@ -8,7 +10,7 @@ app.config["DEBUG"] = True
 @app.route('/db_preprocessing/<table_name>', methods=['PUT'])
 def clean_data(table_name):
     db_api = os.environ['TRAININGDB_API']
-    r = request.get(db_api)
+    r = requests.get(db_api)
     j = r.json()
     df = pd.DataFrame.from_dict(j)
     data_cleaner.clean(df)
