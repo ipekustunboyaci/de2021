@@ -4,6 +4,8 @@ import pandas as pd
 import requests
 from flask import Flask, json, request, Response
 
+from resources import data_cleaner
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
