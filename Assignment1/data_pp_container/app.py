@@ -30,4 +30,4 @@ def read_data(table_name):
     return resp
 
 
-app.run(host='0.0.0.0', port=5006)
+app.run(host='0.0.0.0', port=5000)
